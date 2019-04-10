@@ -20,7 +20,7 @@ try {
 }
 
 const path = useBlob ? dirPath + "data.js" : "data.js";
-worker.postMessage({ path });
+worker.postMessage({ path: path });
 
 worker.addEventListener("message", function(e) {
   console.log(e.data);
